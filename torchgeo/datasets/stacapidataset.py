@@ -7,7 +7,6 @@ import sys
 from typing import Any, Callable, Dict, Optional, Sequence
 
 import matplotlib.pyplot as plt
-import planetary_computer as pc
 import stackstac
 import torch
 from pyproj import Transformer
@@ -132,11 +131,8 @@ class STACAPIDataset(GeoDataset):
                 f"query: {query} not found in index with bounds: {self.bounds}"
             )
 
-        # suggested #
-        signed_items = [pc.sign(item).to_dict() for item in items]
-
         stack = stackstac.stack(
-            signed_items,
+            items,
             assets=self.bands,
             resolution=self.res,
             epsg=self._crs.to_epsg(),
