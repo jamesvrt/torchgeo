@@ -70,6 +70,7 @@ from .sen12ms import SEN12MS
 from .sentinel import Sentinel, Sentinel2
 from .so2sat import So2Sat
 from .spacenet import SpaceNet, SpaceNet1, SpaceNet2, SpaceNet4, SpaceNet5, SpaceNet7
+from .stacapidataset import STACAPIDataset
 from .ucmerced import UCMerced
 from .utils import (
     BoundingBox,
