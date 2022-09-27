@@ -102,7 +102,7 @@ class STACAPIDataset(GeoDataset):
             (minx, maxx), (miny, maxy) = transformer.transform(
                 [minx, maxx], [miny, maxy]
             )
-            dt = item.datetime.toordinal()
+            dt = item.datetime.timestamp()
             mint = dt
             maxt = dt
             coords = (minx, maxx, miny, maxy, mint, maxt)
